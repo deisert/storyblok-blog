@@ -3,8 +3,8 @@
     <header class ="main-header">
         <nav class ="main-nav">
             <ul class="nav-links">
-                <li><nuxt-link to="/">All Posts</nuxt-link></li>
-                <li><nuxt-link to="/about">About</nuxt-link></li>
+                <nuxt-link to="/" tag="li" class="nav-link"><a>All Posts</a></nuxt-link>
+                <nuxt-link to="/about" tag="li" class="nav-link"><a> About </a></nuxt-link>
             </ul>
         </nav>
     </header>
@@ -33,5 +33,33 @@
         align-items: center;
         height: 100%;
     }
+
+    .nav-link {
+        height: 100%;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem;
+        padding: 0.3rem;
+    }
+
+    .nav-link.nuxt-link-exact-active{
+        border-bottom: 4px solid #06c4d1;
+    }
+
+    .nav-link a{
+        display: block;
+        text-decoration: none;
+        color:white; 
+    }
+
+    .nav-link a:hover,
+    .nav-link a:active,
+    .nav-link.nuxt-link-exact-active a
+    {
+        color: #06c4d1;
+    }
+
+
 </style>
 
