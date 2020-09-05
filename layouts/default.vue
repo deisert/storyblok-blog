@@ -5,7 +5,7 @@
 </template>
 
 <style>
-html {
+/* html {
   font-family:
     'Source Sans Pro',
     -apple-system,
@@ -58,5 +58,13 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;  
 }
 </style>
