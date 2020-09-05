@@ -10,13 +10,6 @@
     </header>
 </template>
 
-
-<script>
-export default {
-
-}
-</script>
-
 <style scoped>
     .main-header {
         position: fixed;
@@ -24,6 +17,21 @@ export default {
         left: 0;
         width: 100%;
         background-color: #022d30;  
+        height: 4.5rem;
+    }
+
+    .main-nav{
+        height: 100%;
+    }
+
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
 </style>
 

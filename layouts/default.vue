@@ -12,12 +12,24 @@ import TheHeader from '@/components/TheHeader/TheHeader.vue'
 
 export default {
   components: {
-    TheHeader
+    TheHeader: TheHeader
   }
 }
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;  
+}
+
+.main-content {
+  margin-top: 4.5rem;
+}
+
 /* html {
   font-family:
     'Source Sans Pro',
@@ -72,16 +84,4 @@ export default {
   color: #fff;
   background-color: #35495e;
 } */
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Inter", sans-serif;  
-}
-
-.main-content {
-  margin-top: 4.5rem;
-}
 </style>
