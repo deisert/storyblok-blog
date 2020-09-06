@@ -24,11 +24,13 @@ export default {
 
 body {
   font-family: "Inter", sans-serif;  
-}
+} 
 
 .main-content {
   margin-top: 4.5rem;
 }
+
+</style>
 
 /* html {
   font-family:
@@ -84,4 +86,3 @@ body {
   color: #fff;
   background-color: #35495e;
 } */
-</style>
