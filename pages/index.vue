@@ -21,23 +21,43 @@ export default {
     PostPreview
   },
   
-  data() {
-    return {
-      posts: [{
-          title: 'A New Beginning', 
-          previewText: 'This will be great!',
-          thumbnailUrl: 'https://www.advantageaustria.org/GenticsImageStore/auto/300/prop/zentral/news/aktuell/Storyblok_Logo.jpg', 
-          id: 'a-new-beginning'
-        },
-        {
-          title: 'The Second Beginning', 
-          previewText: 'This will be great, too!',
-          thumbnailUrl: 'https://www.advantageaustria.org/GenticsImageStore/auto/300/prop/zentral/news/aktuell/Storyblok_Logo.jpg', 
-          id: 'a-second-beginning'
-        }
-      ]
-    }
+  asyncData(context) {
+    return context.app.$storyapi
+      .get("cdn/stories", { 
+        version: 'draft', // means development Mode
+        starts_with: 'blog/'
+      })
+    .then(res => { 
+        return {
+          posts: res.data.stories.map(bp => {
+          return {
+            id: bp.slug, 
+            title: bp.content.title, 
+            previewText: bp.content.summary, 
+            thumbnailUrl: bp.content.thumbnail
+          }
+        })
+        };
+    });
   }
+//   data() {
+//     return {
+//       posts: [{
+//           title: 'A New Beginning', 
+//           previewText: 'This will be great!',
+//           thumbnailUrl: 'https://www.advantageaustria.org/GenticsImageStore/auto/300/prop/zentral/news/aktuell/Storyblok_Logo.jpg', 
+//           id: 'a-new-beginning'
+//         },
+//         {
+//           title: 'The Second Beginning', 
+//           previewText: 'This will be great, too!',
+//           thumbnailUrl: 'https://www.advantageaustria.org/GenticsImageStore/auto/300/prop/zentral/news/aktuell/Storyblok_Logo.jpg', 
+//           id: 'a-second-beginning'
+//         }
+//       ]
+//     }
+//   }
+// }
 }
 </script>
 
