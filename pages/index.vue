@@ -11,8 +11,6 @@
   </section>
 </template>
 
-
-
 <script>
 import PostPreview from "@/components/Blog/PostPreview"
 
@@ -40,6 +38,7 @@ export default {
         };
     });
   }
+}
 //   data() {
 //     return {
 //       posts: [{
@@ -58,7 +57,6 @@ export default {
 //     }
 //   }
 // }
-}
 </script>
 
 <style scoped>

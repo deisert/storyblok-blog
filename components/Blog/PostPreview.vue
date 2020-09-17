@@ -1,7 +1,7 @@
 <template>
     <nuxt-link :to="id">
         <article class ="post-preview">
-          <div 
+          <div
           :style="{backgroundImage: 'url(' + thumbnailImage + ')' }"
           class="post-preview-thumbnail"></div>
 
@@ -17,19 +17,19 @@
 export default {
     props: {
         title: {
-            type: String, 
+            type: String,
             required: true
-        }, 
+        },
         excerpt: {
             type: String,
             required: true
         },
         thumbnailImage: {
-            type: String, 
+            type: String,
             required: true
-        }, 
+        },
         id: {
-            type: String, 
+            type: String,
             required: true
         }
     }
@@ -39,7 +39,7 @@ export default {
 <style scoped>
 a {
     text-decoration: none;
-    color: black; 
+    color: black;
 
 }
 
@@ -47,7 +47,7 @@ a {
     border-radius: 3px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
     width: 90%;
-    margin: 1rem; 
+    margin: 1rem;
     height: 20rem;
 }
 
@@ -60,13 +60,13 @@ a {
 
 .post-preview-content{
     text-align: center;
-    padding: 1rem; 
+    padding: 1rem;
 }
 
 @media(min-width: 35rem) {
     .post-preview {
         width: 25rem;
-        margin: 1rem; 
+        margin: 1rem;
     }
 }
 </style>
